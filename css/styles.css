@@ -1,0 +1,233 @@
+/* styles.css */
+
+/*
+  Primero que nada, importamos una fuente más copada desde Google Fonts.
+  Esto le va a dar un look más profesional a nuestros títulos.
+  La vamos a usar en el <h1> de nuestro header.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
+/*
+  Reseteo básico y estilos generales para todo el documento.
+  - 'box-sizing: border-box' es una regla clave para que el padding y el border
+    no nos agranden las cajas de forma inesperada. ¡Un clásico!
+  - Ponemos un color de fondo tranqui y definimos la fuente principal.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f0f0f0; /* Un gris clarito para que no canse la vista */
+}
+
+/*
+  Estilos para el encabezado de nuestra página.
+  - Lo centramos, le damos un poco de aire con 'padding' y una sombra suave
+    para que se despegue del fondo.
+  - Y acá usamos la fuente 'Nunito' que importamos al principio.
+*/
+header {
+  background-color: #ef5350; /* El rojo clásico de Pokémon */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif; /* ¡Nuestra fuente importada! */
+  font-weight: 900; /* La versión más "gordita" de la fuente */
+  letter-spacing: 2px;
+  border-bottom: 5px solid #c62828;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*
+  Este es el contenedor principal de nuestras tarjetas de Pokémon.
+  - 'display: flex' activa el poder de Flexbox. ¡Magia!
+  - 'flex-wrap: wrap' permite que las tarjetas pasen a la línea de abajo si no entran.
+  - 'justify-content: center' centra las tarjetas horizontalmente en el contenedor.
+  - 'gap' es un atajo genial para poner espacio entre los elementos del flex.
+*/
+#pokemon-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/*
+  ¡La estrella del show! La tarjeta de cada Pokémon.
+  - Le damos un ancho fijo y la hacemos flexible en su interior con 'display: flex'.
+  - 'position: relative' es CLAVE. Nos va a permitir posicionar la imagen
+    del Pokémon de forma "absoluta" pero relativa a la tarjeta.
+  - Una 'transition' suave para que los cambios se vean más fluidos.
+*/
+.pokemon-tarjeta {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 5px solid #444;
+  padding: 20px;
+  color: white;
+  display: flex;
+  position: relative; /* ¡Importante para posicionar la imagen! */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s; /* Efecto al pasar el mouse */
+}
+
+/* Un pequeño efecto para cuando pasamos el mouse por encima */
+.pokemon-tarjeta:hover {
+  transform: scale(1.05); /* La agrandamos un poquito */
+}
+
+/*
+  La parte de la información (izquierda de la tarjeta).
+  - 'flex: 1' hace que este div ocupe todo el espacio disponible.
+  - 'z-index' nos asegura que la información quede por encima de la imagen.
+*/
+.pokemon-informacion {
+  flex: 1;
+  z-index: 2;
+}
+
+/*
+  Contenedor de la imagen (derecha de la tarjeta).
+  - 'position: absolute' saca la imagen del flujo normal y nos deja
+    moverla a donde queramos, usando 'top', 'right', etc.
+  - Las coordenadas la ubican en la esquina superior derecha.
+  - 'opacity' la hace un poco transparente para que se integre mejor.
+*/
+.pokemon-imagen {
+  position: absolute;
+  top: -30px; /* La subimos un poco */
+  right: -20px; /* La corremos a la derecha */
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.pokemon-imagen img {
+  width: 150px; /* Un tamaño fijo para la imagen */
+  filter: drop-shadow(
+    2px 4px 6px black
+  ); /* Una sombra más pro que 'box-shadow' */
+}
+
+/*
+  El encabezado dentro de la tarjeta (nombre y número).
+  - De nuevo, Flexbox al rescate para alinear las cosas.
+  - 'justify-content: space-between' empuja el nombre a la izquierda y el número a la derecha.
+*/
+.pokemon-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pokemon-nombre {
+  text-transform: capitalize; /* Para que la primera letra sea mayúscula */
+  font-size: 1.5em;
+}
+
+.pokemon-numero {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/*
+  Contenedor para las etiquetas de tipo (Planta, Fuego, etc.).
+  - 'display: flex' para ponerlas una al lado de la otra.
+  - 'gap' para darles un respiro entre ellas.
+*/
+.pokemon-tipos {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.tipo {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #212121;
+  background-color: #a8a878; /* Un color genérico por si no especificamos */
+}
+
+/*
+  Pequeños estilos para algunos tipos, ¡para que quede más vistoso!
+  Si el de tu pokemon no esta, agrega el tuyo propio
+*/
+.fantasma {
+  background-color: #705898;
+}
+.veneno {
+  background-color: #a040a0;
+}
+.planta {
+  background-color: #78c850;
+}
+.fuego {
+  background-color: #f08030;
+}
+.agua {
+  background-color: #6890f0;
+}
+.psíquico {
+  background-color: #f85888;
+}
+
+.pokemon-descripcion {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+/* Estilos para las estadísticas (HP, Ataque, etc.) */
+.estadistica {
+  margin-bottom: 5px;
+}
+
+.estadisticas-grupo {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+/*
+  Esta es la caja de AFUERA de la barra de HP.
+  - Le damos un alto fijo y un color de fondo oscuro, como si estuviera "vacía".
+  - El 'border-radius' la hace redondeada en las puntas.
+  - 'overflow: hidden' es un truco para que si el relleno de adentro se pasa,
+    quede "recortado" por los bordes redondeados del padre.
+*/
+.estadistica-barra {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*
+  Esta es la caja de ADENTRO, la que se va a "llenar".
+  - Por ahora le ponemos un color verde y el mismo alto que el padre.
+  - El ancho (width) lo vamos a manejar desde JavaScript, ¡esa es la clave!
+  - Le agregamos una transición para que el llenado sea suave (si en el futuro animamos algo).
+*/
+.estadistica-llena {
+  height: 100%;
+  background-color: #4caf50; /* Verde para la vida */
+  border-radius: 8px;
+  color: white; /* Hacemos el texto visible sobre la barra */
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center; /* Centramos el número del HP */
+  line-height: 20px; /* Truco para centrar verticalmente el texto */
+  transition: width 0.5s ease-in-out;
+}
