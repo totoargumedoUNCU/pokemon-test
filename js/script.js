@@ -78,21 +78,6 @@ const listaPokemon = [
     colorFondo: "#705898",
     colorBorde: "#493963",
   },
-  {
-    nombre: "Gengar",
-    img: "../img/gengar.webp",
-    tipo: ["Fantasma", "Veneno"],
-    numero: 94,
-    descripcion:
-      "Gengar es un Pokémon de tipo Fantasma y Veneno. Es conocido por su naturaleza traviesa y su habilidad para esconderse en las sombras.",
-    hp: 60,
-    hpActual: 60,
-    ataque: 65,
-    defensa: 60,
-    velocidad: 110,
-    colorFondo: "#705898",
-    colorBorde: "#493963",
-  },
 ];
 
 // === NUEVO CÓDIGO PARA CARGAR LOS POKEMONES DINÁMICAMENTE ===
