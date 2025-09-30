@@ -93,6 +93,21 @@ const listaPokemon = [
     colorFondo: "#C6B3D7",
     colorBorde: "#9D8EB0",
   },
+  {
+    nombre: "Gotzilla ",
+    img: "../img/Gotzilla.png",
+    tipo: ["Epica"],
+    numero: 150,
+    descripcion:
+      "Gotzilla revienta todo lo que se cruza en su camino.",
+    hp: 84,
+    hpActual: 84,
+    ataque: 98,
+    defensa: 91,
+    velocidad: 98,
+    colorFondo: "#0a5274ff",
+    colorBorde: "#91a3f0ff",
+  },
 ];
 
 // === NUEVO CÓDIGO PARA CARGAR LOS POKEMONES DINÁMICAMENTE ===
