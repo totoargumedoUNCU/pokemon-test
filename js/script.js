@@ -93,6 +93,20 @@ const listaPokemon = [
     colorFondo: "#C6B3D7",
     colorBorde: "#9D8EB0",
   },
+  {
+    nombre: "Nidoking",
+    img: "../img/Nidoking.png",
+    tipo: ["Veneno", "Tierra"],
+    numero: 34,
+    descripcion: "Usa su potente cola en combate para aplastar y oprimir a su presa. Después le rompe los huesos.",
+    hp: 122,
+    hpActual: 101,
+    ataque: 52,
+    defensa: 67,
+    velocidad: 31,
+    colorFondo: "#ee8bf7ff",
+    colorBorde: "#593068ff",
+  },
 ];
 
 // === NUEVO CÓDIGO PARA CARGAR LOS POKEMONES DINÁMICAMENTE ===
