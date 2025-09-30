@@ -94,6 +94,21 @@ const listaPokemon = [
     colorBorde: "#9D8EB0",
   },
   {
+
+    nombre: "Gotzilla ",
+    img: "../img/Gotzilla.png",
+    tipo: ["Epica"],
+    numero: 150,
+    descripcion:
+      "Gotzilla revienta todo lo que se cruza en su camino.",
+    hp: 84,
+    hpActual: 84,
+    ataque: 98,
+    defensa: 91,
+    velocidad: 98,
+    colorFondo: "#0a5274ff",
+    colorBorde: "#91a3f0ff",
+  },
     nombre: "Nidoking",
     img: "../img/Nidoking.png",
     tipo: ["Veneno", "Tierra"],
@@ -106,6 +121,7 @@ const listaPokemon = [
     velocidad: 31,
     colorFondo: "#ee8bf7ff",
     colorBorde: "#593068ff",
+
   },
 ];
 
