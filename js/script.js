@@ -78,6 +78,21 @@ const listaPokemon = [
     colorFondo: "#705898",
     colorBorde: "#493963",
   },
+    {
+    nombre: "Ditto ",
+    img: "../img/ditto.webp",
+    tipo: ["Normal"],
+    numero: 132,
+    descripcion:
+      "Ditto toma la forma de una figura amorfa color violeta. Es probable que, en el caso de estar este Pokémon ligeramente basado en alguna forma de vida animal, sea en un placozoo.",
+    hp: 84,
+    hpActual: 84,
+    ataque: 91,
+    defensa: 91,
+    velocidad: 96,
+    colorFondo: "#C6B3D7",
+    colorBorde: "#9D8EB0",
+  },
 ];
 
 // === NUEVO CÓDIGO PARA CARGAR LOS POKEMONES DINÁMICAMENTE ===
