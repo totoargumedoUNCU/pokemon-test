@@ -88,7 +88,7 @@ const listaPokemon = [
     hp: 84,
     hpActual: 84,
     ataque: 91,
-    defensa: 91,
+    defensa: 92,
     velocidad: 96,
     colorFondo: "#C6B3D7",
     colorBorde: "#9D8EB0",
